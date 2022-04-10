@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--https://youtu.be/YsHHXg1vbcc
+    Used this video to create the circular and determinate progressBar-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="ring"
+            android:thicknessRatio="16"
+            android:useLevel="false">
+            <solid android:color="#DDD" />
+        </shape>
+    </item>
+    <item>
+        <rotate
+
+            android:fromDegrees="270"
+            android:toDegrees="270">
+<!--            this rotate tag will make the progress bar progress from top. By default the progress bar progresses from the right side, so to make it progress from the top, we can either rotate it from and to -90 degrees or 270 degrees-->
+            <shape
+                android:shape="ring"
+                android:thicknessRatio="16"
+                android:useLevel="true">
+                <gradient
+                    android:endColor="#FC57A8E8"
+                    android:startColor="#0B60A3"
+                     />
+<!--                endColor and startColor are used to add gradient effect, the color changes as the progress bar progresses.-->
+            </shape>
+        </rotate>
+    </item>
+</layer-list>
